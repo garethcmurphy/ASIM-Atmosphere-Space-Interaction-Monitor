@@ -1,0 +1,13 @@
+from asim.models import ScienceData
+
+from django.utils import timezone
+s=ScienceData( obsid=7771,  lat=55.3, lon=12.57,  date=timezone.now(), trig='bluejet',  inst='mxgs', lev0='lev1.cdf', lev1='lev1.cdf', prev='image.png')
+
+s.save()
+
+
+from asim.models import ScienceData
+s=ScienceData.objects.get(pk=1)
+print (s)
+
+

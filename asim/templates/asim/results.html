@@ -1,0 +1,49 @@
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'asim/css/tab.css' %}">
+
+ {% include "includes/header.html"  %} 
+
+ {% include "includes/menu.html" with active_tab='Search' %} 
+
+{% if results %}
+
+<br>
+Your search results are:
+<br>
+
+ <div class="rTable">
+     <div class="rTableRow">
+        <div class="rTableHead"> <strong> obsid  </strong> </div>
+        <div class="rTableHead"> <strong> date  </strong> </div>
+        <div class="rTableHead"> <strong> inst </strong> </div>
+        <div class="rTableHead"> <strong> lat </strong> </div>
+        <div class="rTableHead"> <strong> lon </strong> </div>
+        <div class="rTableHead"> <strong> lev0 </strong> </div>
+        <div class="rTableHead"> <strong> lev1 </strong> </div>
+        <div class="rTableHead"> <strong> prev </strong> </div>
+     </div>
+    {% for result in results %}
+     <div class="rTableRow">
+<div class="rTableCell">{{ result.obsid }} </div>
+<div class="rTableCell">{{ result.date }} </div>
+<div class="rTableCell">{{ result.inst }}</div>
+<div class="rTableCell">{{ result.lat }}</div>
+<div class="rTableCell">{{ result.lon }}</div>
+<div class="rTableCell"><a href='{{ result.lev0 }} '  >{{ result.lev0 }}</a></div>
+<div class="rTableCell"><a href='{{ result.lev1 }} '  >{{ result.lev1 }}</a></div>
+<div class="rTableCell"><a href='{{ result.prev }} '  >{{ result.prev }}</a></div>
+     </div>
+
+
+    {% endfor %}
+</div>
+
+{% else %}
+    <h3 class='error'>Please enter a valid UID</h3>
+    <form method="get" action='/asim/search/'>
+      Enter an Observational ID:<input type="text" name="q" id="id_q" value="{{ query }}"/>
+      <input type="submit" value="Search" />
+    </form>
+{% endif %}

@@ -1,0 +1,8 @@
+
+{% if results %}
+  {% for scidat in results %}
+    <p>Date: {{ scidat.date }}</p>
+  {% endfor %}
+{% else %}
+  <p>Sorry no results for your query</p>
+{% endif %}

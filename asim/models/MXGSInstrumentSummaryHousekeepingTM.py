@@ -1,0 +1,3 @@
+
+class MXGSInstrumentSummaryHousekeepingTM
+    pass

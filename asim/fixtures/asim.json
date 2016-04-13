@@ -1,0 +1,62 @@
+[
+{
+    "model": "asim.sciencedata",
+    "pk": 1,
+    "fields": {
+        "lat": 55.3,
+        "lon": 12.57,
+        "obsid": 7771.0,
+        "date": "2016-03-22T10:19:15Z",
+        "trig": "bluejet",
+        "inst": "mxgs",
+        "lev0": "lev1.cdf",
+        "lev1": "lev1.cdf",
+        "prev": "image.png"
+    }
+},
+{
+    "model": "asim.sciencedata",
+    "pk": 2,
+    "fields": {
+        "lat": 55.9,
+        "lon": 12.3,
+        "obsid": 7772.0,
+        "date": "2016-03-22T12:34:36Z",
+        "trig": "sprite",
+        "inst": "mmia",
+        "lev0": "lev0.cdf",
+        "lev1": "lev1.cdf",
+        "prev": "im1.png"
+    }
+},
+{
+    "model": "asim.sciencedata",
+    "pk": 3,
+    "fields": {
+        "lat": 54.9,
+        "lon": 12.1,
+        "obsid": 7773.0,
+        "date": "2016-03-22T12:34:36Z",
+        "trig": "bluegiant",
+        "inst": "mmia",
+        "lev0": "lev0.cdf",
+        "lev1": "lev1.cdf",
+        "prev": "im1.png"
+    }
+},
+{
+    "model": "asim.sciencedata",
+    "pk": 4,
+    "fields": {
+        "lat": 55.5,
+        "lon": 12.2,
+        "obsid": 7774.0,
+        "date": "2016-03-22T12:34:36Z",
+        "trig": "bluejet",
+        "inst": "mmianc1",
+        "lev0": "lev0.cdf",
+        "lev1": "lev1.cdf",
+        "prev": "im1.png"
+    }
+}
+]

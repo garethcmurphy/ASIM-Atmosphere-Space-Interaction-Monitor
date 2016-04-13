@@ -1,0 +1,47 @@
+ {% include "includes/header.html"  %} 
+
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'asim/css/tab.css' %}">
+
+
+ {% include "includes/menu.html" with active_tab='Home' %} 
+
+
+
+
+
+
+
+
+
+<h2>
+ Science Data</h2>
+
+ <div class="rTable">
+     <div class="rTableRow">
+        <div class="rTableHead"> <strong> obsid  </strong> </div>
+        <div class="rTableHead"> <strong> date  </strong> </div>
+        <div class="rTableHead"> <strong> inst </strong> </div>
+        <div class="rTableHead"> <strong> lat </strong> </div>
+        <div class="rTableHead"> <strong> lon </strong> </div>
+        <div class="rTableHead"> <strong> lev0 </strong> </div>
+        <div class="rTableHead"> <strong> lev1 </strong> </div>
+        <div class="rTableHead"> <strong> prev </strong> </div>
+     </div>
+     <div class="rTableRow">
+<div class="rTableCell">{{ sciencedata.obsid }} </div>
+<div class="rTableCell">{{ sciencedata.date }} </div>
+<div class="rTableCell">{{ sciencedata.inst }}</div>
+<div class="rTableCell">{{ sciencedata.lat }}</div>
+<div class="rTableCell">{{ sciencedata.lon }}</div>
+<div class="rTableCell"><a href='{{ sciencedata.lev0 }} '  >{{ sciencedata.lev0 }}</a></div>
+<div class="rTableCell"><a href='{{ sciencedata.lev1 }} '  >{{ sciencedata.lev1 }}</a></div>
+<div class="rTableCell"><a href='{{ sciencedata.prev }} '  >{{ sciencedata.prev }}</a></div>
+     </div>
+ </div>
+
+
+
+

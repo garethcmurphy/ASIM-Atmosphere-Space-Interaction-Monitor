@@ -1,0 +1,17 @@
+
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'asim/css/tab.css' %}">
+
+
+{% include "includes/menu.html" with active_tab='Search' %}
+
+
+
+
+<form action="{% url 'asim:name' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>

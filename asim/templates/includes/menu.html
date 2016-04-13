@@ -1,0 +1,7 @@
+
+<ul class="tab-menu">
+    <li class="{% if active_tab == 'Home'    %}active{% endif %}"><a href="{% url 'asim:index'  %}">Home</a></li>
+    <li class="{% if active_tab == 'Search'  %}active{% endif %}"><a href="{% url 'asim:search' %}">Search</a></li>
+    <li class="{% if active_tab == 'Browse'  %}active{% endif %}"><a href="{% url 'asim:browse' %}">Browse</a></li>
+    <li class="{% if active_tab == 'Manuals' %}active{% endif %}"><a href="#">Manuals</a></li>
+</ul>

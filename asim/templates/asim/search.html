@@ -1,0 +1,15 @@
+
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'asim/css/tab.css' %}">
+
+{% include "includes/menu.html" with active_tab='Search' %}
+
+	
+
+
+<form method="get" action="/search/">
+  Enter an obs ID:<input type="text" name="q" id="id_q" value="{{ query }}"/>
+  <input type="submit" value="Search" />
+</form>
