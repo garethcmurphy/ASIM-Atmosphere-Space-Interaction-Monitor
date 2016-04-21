@@ -4,5 +4,9 @@ from django.contrib.postgres.fields import ArrayField
 import datetime
 from django.contrib import admin
 
-class MXGSInstrumentHousekeepingTM(models.Model): 
-    utc_year                        =models.IntegerField('UTC year')
+
+# Create your models here.
+
+class OrbitModel(models.Model):
+    night=models.BooleanField()
+    orbitstr=models.CharField(max_length=200)

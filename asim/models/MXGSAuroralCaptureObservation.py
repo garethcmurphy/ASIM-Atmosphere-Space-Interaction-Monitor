@@ -1,5 +1,15 @@
+from django.db import models
+from django.utils import timezone
+from django.contrib.postgres.fields import ArrayField
+import datetime
+from django.contrib import admin
+from django.db import models
+from django.utils import timezone
+from django.contrib.postgres.fields import ArrayField
+import datetime
+from django.contrib import admin
 
-class MXGSAuroralCaptureObservation(models.Model)
+class MXGSAuroralCaptureObservation(models.Model):
     utc_year                        =models.IntegerField('UTC year')
     utc_msec                        =models.IntegerField('UTC msec')
     utc_seconds                     =models.IntegerField('UTC seconds')

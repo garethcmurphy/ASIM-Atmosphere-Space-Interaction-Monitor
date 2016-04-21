@@ -1,5 +1,13 @@
 
-class BackgroundObservation(models.Model)
+from django.db import models
+from django.utils import timezone
+from django.contrib.postgres.fields import ArrayField
+import datetime
+from django.contrib import admin
+
+
+
+class BackgroundObservation(models.Model):
     dau_bgo_1_int_tmon_chan1        =models.IntegerField()
     dau_bgo_1_int_tmon_chan2        =models.IntegerField()
     dau_bgo_1_int_tmon_chan3        =models.IntegerField()

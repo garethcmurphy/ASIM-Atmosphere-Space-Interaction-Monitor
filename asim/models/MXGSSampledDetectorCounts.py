@@ -1,6 +1,11 @@
+from django.db import models
+from django.utils import timezone
+from django.contrib.postgres.fields import ArrayField
+import datetime
+from django.contrib import admin
 
 
-class MXGSSampledDetectorCounts(models.Model)
+class MXGSSampledDetectorCounts(models.Model):
     dau_bgo_1_int_tmon_chan1        =models.IntegerField()
     dau_bgo_1_int_tmon_chan2        =models.IntegerField()
     dau_bgo_1_int_tmon_chan3        =models.IntegerField()
@@ -18,7 +23,7 @@ class MXGSSampledDetectorCounts(models.Model)
     dau_bgo_4_int_tmon_chan3        =models.IntegerField()
     dau_bgo_4_int_tmon_chan4        =models.IntegerField()
 
-class MXGSSampledDetectorCounts1Second(models.Model)
+class MXGSSampledDetectorCounts1Second(models.Model):
     mxgs_sampled_detector_counts = models.ForeignKey(MXGSSampledDetectorCounts, on_delete=models.CASCADE)
     utc_year                        =models.IntegerField('UTC year')
     utc_msec                        =models.IntegerField('UTC msec')
