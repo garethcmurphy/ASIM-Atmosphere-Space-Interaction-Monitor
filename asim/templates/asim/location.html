@@ -1,0 +1,33 @@
+
+
+
+ {% include "includes/header.html"  %} 
+
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'asim/css/tab.css' %}">
+
+
+ {% include "includes/menu.html" with active_tab='OrbitDisplay' %} 
+
+
+
+
+
+
+
+<head>
+	<!-- Source: http://wiki.openstreetmap.org/wiki/Openlayers_Track_example -->
+	<title>ISS ASIM Orbit Display</title>
+
+
+<!-- form action={% url 'asim:location' %} method="post" -->
+<form action="" method="post" >
+{% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit" />
+</form>
+
+
+

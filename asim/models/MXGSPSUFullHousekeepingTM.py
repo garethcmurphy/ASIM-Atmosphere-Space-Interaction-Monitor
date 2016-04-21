@@ -4,5 +4,6 @@ from django.contrib.postgres.fields import ArrayField
 import datetime
 from django.contrib import admin
 
-class MXGSInstrumentHousekeepingTM(models.Model): 
+class MXGSPSUFullHousekeepingTM (models.Model):
     utc_year                        =models.IntegerField('UTC year')
+

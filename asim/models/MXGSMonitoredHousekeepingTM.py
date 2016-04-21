@@ -1,6 +1,11 @@
+from django.db import models
+from django.utils import timezone
+from django.contrib.postgres.fields import ArrayField
+import datetime
+from django.contrib import admin
 
 
-class MXGSMonitoredHousekeepingTM
+class MXGSMonitoredHousekeepingTM(models.Model):
     utc_year_hk_gen                 =models.IntegerField()
     utc_msec_hk_gen                 =models.IntegerField()
     utc_seconds_hk_gen              =models.IntegerField()
