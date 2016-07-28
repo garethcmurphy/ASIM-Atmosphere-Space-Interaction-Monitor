@@ -1,0 +1,54 @@
+
+
+
+ {% include "includes/header.html"  %} 
+
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'asim/css/tab.css' %}">
+
+
+ {% include "includes/menu.html" with active_tab='Browse' %} 
+
+
+
+ {% include "includes/mxgsmenu.html" with active_tab='TGF' %} 
+
+
+
+
+
+{% load staticfiles %}
+
+
+{% if latest_tgf_list %}
+    <ul>
+ <div class="rTable">
+     <div class="rTableRow">
+        <div class="rTableHead"> <strong> Observation Id  </strong> </div>
+        <div class="rTableHead"> <strong> Year  </strong> </div>
+        <div class="rTableHead"> <strong> UTC seconds </strong> </div>
+        <div class="rTableHead"> <strong> MMIA trigger enabled </strong> </div>
+        <div class="rTableHead"> <strong> Number of counts </strong> </div>
+        <div class="rTableHead"> <strong> Detector Counts </strong> </div>
+     </div>
+    {% for tgf in latest_tgf_list %}
+     <div class="rTableRow">
+<div class="rTableCell">{{ tgf.observation_id }} </div>
+<div class="rTableCell">{{ tgf.utc_year }} </div>
+<div class="rTableCell">{{ tgf.utc_seconds }}</div>
+<div class="rTableCell">{{ tgf.trig_mmia_enabled }}</div>
+<div class="rTableCell">{{ tgf.num_counts }}</div>
+<! --- div class="rTableCell" -->
+<div class="rTableCell">
+<img src="{% static 'asim/2016/117/mxgsprev001.jpg' %}" height= 50 alt="My image"/>
+</div>
+     </div>
+
+
+    {% endfor %}
+</div>
+{% else %}
+    <p>No asim are available.</p>
+{% endif %}

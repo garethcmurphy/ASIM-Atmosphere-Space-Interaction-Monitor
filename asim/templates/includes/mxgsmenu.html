@@ -1,0 +1,8 @@
+
+<ul class="tab-menu">
+    <li class="{% if active_tab == 'TGF'    %}active{% endif %}"><a href="{% url 'asim:tgf'  %}">TGF</a></li>
+    <li class="{% if active_tab == 'Background'  %}active{% endif %}"><a href="{% url 'asim:search' %}">Background</a></li>
+    <li class="{% if active_tab == 'PulseHeightSpectrum'  %}active{% endif %}"><a href="{% url 'asim:browse' %}">Pulse Height Spectrum</a></li>
+    <li class="{% if active_tab == 'SampledDetectorCounts'  %}active{% endif %}"><a href="{% url 'asim:orbitdisplay' %}">Sampled Detector Counts</a></li>
+    <li class="{% if active_tab == 'AuroralCapture' %}active{% endif %}"><a href="#">AuroralCapture</a></li>
+</ul>
