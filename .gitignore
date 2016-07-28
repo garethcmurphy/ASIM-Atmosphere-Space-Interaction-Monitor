@@ -89,3 +89,7 @@ ENV/
 
 # vi
 .swp
+
+MMIAHousekeeping.py
+MMIATimedObservationTM.py
+MMIATriggeredObservationTM.py
