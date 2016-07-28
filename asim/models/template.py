@@ -5,6 +5,7 @@ import datetime
 from django.contrib import admin
 
 class template (models.Model):
+    private_header                  = models.IntegerField()
     packet_length                   = models.IntegerField('Packet length')
     utc_year                        = models.IntegerField('UTC year')
     utc_msec                        = models.IntegerField('UTC msec')

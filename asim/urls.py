@@ -7,6 +7,7 @@ app_name = 'asim'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'browse/$', views.browse, name='browse'),
+    url(r'tgf/$', views.tgf, name='tgf'),
     url(r'orbitdisplay/$', views.orbitdisplay, name='orbitdisplay'),
     url(r'your_location/$', views.your_location, name='your_location'),
     # sample polls/5/

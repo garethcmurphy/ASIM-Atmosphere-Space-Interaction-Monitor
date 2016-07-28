@@ -9,8 +9,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.template import loader
 from datetime import datetime, timedelta
 
-from .models import ScienceData
-from .models import ISSpredict
+from asim.models import *
 from .forms import NameForm
 from asim.forms import LocForm
 
@@ -18,15 +17,20 @@ import ephem
 import numpy as np
 
 def index(request):
-    latest_sciencedata_list = ScienceData.objects.order_by('-date')[:5]
-    context = { 'latest_sciencedata_list': latest_sciencedata_list }
+    latest_tgf_list = MXGSTGFObservation.objects.order_by('-utc_year')[:10]
+    context = { 'latest_tgf_list': latest_tgf_list }
     return  render(request, 'asim/index.html', context)
     
 
+def tgf(request):
+    latest_tgf_list = MXGSTGFObservation.objects.order_by('-utc_year')[:10]
+    context = { 'latest_tgf_list': latest_tgf_list }
+    return  render(request, 'asim/tgf.html', context)
+    
 
 def browse(request):
-    latest_sciencedata_list = ScienceData.objects.order_by('-date')[:10]
-    context = { 'latest_sciencedata_list': latest_sciencedata_list }
+    latest_tgf_list = MXGSTGFObservation.objects.order_by('-utc_year')[:10]
+    context = { 'latest_tgf_list': latest_tgf_list }
     return  render(request, 'asim/browse.html', context)
     
 
@@ -41,7 +45,7 @@ def orbitdisplay(request):
         '1 25544U 98067A   16103.90629446  .00006076  00000-0  97790-4 0  9996',
         '2 25544  51.6437  23.6320 0002668  61.0097  30.5624 15.54459501994820'
     )
-    mydatenow=datetime.utcnow()
+    mydatenow=datetime.datetime.utcnow()
     home.date=mydatenow
     iss.compute(home)
     latest_sciencedata_list = ScienceData.objects.order_by('-date')[:10]
