@@ -1,87 +1,104 @@
-# Django website
+# ASIM: Atmosphere Space Interaction Monitor 🌌📊  
 
-One Paragraph of project description goes here
+This repository hosts the **ASIM Science Data Center (ASDC)** website, built with **Django** and backed by a **PostgreSQL** database. The platform is designed for managing and distributing **CDF** and **FITS** files related to the **Atmosphere Space Interaction Monitor** project.
 
-## Getting Started
+---
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Features ✨  
 
-### Prerequisites
+- **Science Data Hosting**: Manage and distribute ASIM science data in CDF and FITS formats.  
+- **Django Framework**: Robust and scalable web application built with Django.  
+- **PostgreSQL Integration**: Reliable backend for storing metadata and user information.  
 
-What things you need to install the software and how to install them
+---
 
-```
-Give examples
-```
+## Prerequisites 🛠️  
 
-### Installing
+- Python 3.8+  
+- PostgreSQL database installed and configured.  
+- Required Python libraries:
+  - `django`
+  - `psycopg2`
+  - `astropy`  
 
-A step by step series of examples that tell you have to get a development env running
+Install dependencies:  
+pip install django psycopg2 astropy  
 
-Say what the step will be
+---
 
-```
-Give the example
-```
+## Installation  
 
-And repeat
+1. Clone the repository:  
+git clone https://github.com/your-username/asim-science-center.git  
+cd asim-science-center  
 
-```
-until finished
-```
+2. Install required dependencies:  
+pip install -r requirements.txt  
 
-End with an example of getting some data out of the system or using it for a little demo
+3. Configure the database:  
+Update `settings.py` with your PostgreSQL database credentials.  
 
-## Running the tests
+4. Apply database migrations:  
+python manage.py migrate  
 
-Explain how to run the automated tests for this system
+5. Start the development server:  
+python manage.py runserver  
 
-### Break down into end to end tests
+6. Access the application in your browser:  
+http://localhost:8000  
 
-Explain what these tests test and why
+---
 
-```
-Give an example
-```
+## Usage 🔧  
 
-### And coding style tests
+1. **Upload Science Data**:  
+   Log in as an admin to upload CDF and FITS files for distribution.  
 
-Explain what these tests test and why
+2. **Search Data**:  
+   Use the website interface to search and download available datasets.  
 
-```
-Give an example
-```
+3. **API Access**:  
+   Retrieve data programmatically using the built-in REST API endpoints.  
 
-## Deployment
+---
 
-Add additional notes about how to deploy this on a live system
+## File Structure 📂  
 
-## Built With
+- `asim/`: Main Django application code.  
+- `templates/`: HTML templates for the web interface.  
+- `static/`: Static files such as CSS and JavaScript.  
+- `README.md`: Documentation for the repository.  
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+---
 
-## Contributing
+## Deployment 🚀  
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+1. Use a production-ready WSGI server such as **Gunicorn**.  
+2. Set up a reverse proxy with **Nginx**.  
+3. Configure PostgreSQL for high availability and performance.  
 
-## Versioning
+---
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+## Contributing 🤝  
 
-## Authors
+1. Fork the repository.  
+2. Create a new branch:  
+git checkout -b feature/your-feature  
 
-* **Gareth Murphy** - *Initial work* - [garethcmurphy](https://github.com/garethcmurphy)
+3. Commit your changes:  
+git commit -m "Add your feature"  
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+4. Push the branch:  
+git push origin feature/your-feature  
 
-## License
+5. Open a pull request.  
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+---
 
-## Acknowledgments
+## License 📝  
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License. See the LICENSE file for details.  
+
+---
+
+**Manage and distribute ASIM science data effortlessly!** 🌌📊  
